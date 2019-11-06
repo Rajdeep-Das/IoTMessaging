@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>IoT-Messaging</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <center>
+            <h1>IoT-Messaging Realtime Update With Multiple Devices</h1>
+        </center></br>
+
+        <div class="jumbotron">
+            <p class="lead">Message</p>
+            <h3 id="message" class="display-4">Loading...</h3>
+            
+            <hr class="my-4">
+            <p>Type and Press Send To Update Message In All Devices and Observe Realtime Changes</p>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="input_message" aria-describedby="message"
+                        placeholder="Type Message">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your private message with
+                        anyone else.</small>
+                </div>
+            </form>
+            <p class="lead">
+                <button class="btn btn-warning" onclick="sendMessage()" role="button" id="btn_send">Send</button>
+            </p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--firebase-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+     <!-- Add Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCSCDFTdt1SNiS8DbZV9rvQNON8aH2H25A",
+            authDomain: "iotmessaging-aa5da.firebaseapp.com",
+            databaseURL: "https://iotmessaging-aa5da.firebaseio.com",
+            projectId: "iotmessaging-aa5da",
+            storageBucket: "iotmessaging-aa5da.appspot.com",
+            messagingSenderId: "967552387303",
+            appId: "1:967552387303:web:a9eea785a09ed1d5da3a42"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+         // Get a reference to the database service
+        var database = firebase.database();
+        
+    </script>
+    <script src="./app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
