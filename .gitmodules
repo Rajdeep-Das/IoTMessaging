@@ -1,0 +1,4 @@
+[submodule "IoTMessaging-Android"]
+	path = IoTMessaging-Android
+	url = https://github.com/Rajdeep-Das/IoTMessaging-Android
+	branch = master
